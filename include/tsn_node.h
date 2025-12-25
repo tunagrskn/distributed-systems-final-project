@@ -13,26 +13,26 @@ using namespace omnetpp;
  */
 class TSNNode : public cSimpleModule
 {
-  protected:
+protected:
     int nodeId;              // Unique node identifier
     int numNodes;            // Total number of nodes in the network
     std::set<int> neighbors; // Set of neighbor node IDs
-    
+
     // Statistics
     simsignal_t leaderElectedSignal;
     simsignal_t messagesSentSignal;
     simsignal_t roundsCompletedSignal;
-    
+
     // Initialization
     virtual void initialize() override;
-    virtual void handleMessage(cMessage *msg) override;
-    
+    virtual void handleMessage(cMessage* msg) override;
+
     // Utility methods
     virtual void discoverNeighbors();
-    virtual void broadcastToNeighbors(cMessage *msg);
+    virtual void broadcastToNeighbors(cMessage* msg);
     virtual int getNeighborGateIndex(int neighborId);
-    
-  public:
+
+public:
     TSNNode();
     virtual ~TSNNode();
 };

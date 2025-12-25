@@ -1,7 +1,0 @@
-# OMNeT++ installation path
-option('omnetpp_root', type : 'string', value : '/space/jupiter/tools/omnetpp-6.3.0',
-       description : 'Path to OMNeT++ installation directory')
-
-# Output directory
-option('out_dir', type : 'string', value : 'out/clang-release',
-       description : 'Output directory for executable')
